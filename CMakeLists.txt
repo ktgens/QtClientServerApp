@@ -8,7 +8,11 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Widgets REQUIRED)
+if(WIN32)
+    set(CMAKE_PREFIX_PATH "C:/Qt/5.15.0/msvc2019_64")
+endif()
+
+find_package(Qt5 COMPONENTS Widgets Network REQUIRED)
 
 add_executable(QtVsCodeDemo
     main.cpp
