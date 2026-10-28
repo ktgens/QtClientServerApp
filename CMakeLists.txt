@@ -14,12 +14,18 @@ endif()
 
 find_package(Qt5 COMPONENTS Widgets Network REQUIRED)
 
-add_executable(QtVsCodeDemo
-    main.cpp
-    StateButton.h
-    StateButton.cpp
-    resources.qrc
+#Клиент
+add_executable(FileClient
+    client/main.cpp
+    client/ClientWindow.h
+    client/ClientWindow.cpp
 )
+target_link_libraries(FileClient PRIVATE Qt5::Widgets Qt5::Network)
 
-target_link_libraries(QtVsCodeDemo PRIVATE Qt5::Widgets)
-
+#Сервер
+add_executable(FileServer
+    server/main.cpp
+    server/ServerWindow.h
+    server/ServerWindow.cpp
+)
+target_link_libraries(FileServer PRIVATE Qt5::Widgets Qt5::Network)
