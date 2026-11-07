@@ -24,5 +24,5 @@ private:
     QTextEdit *m_logTextEdit;
     QPushButton *m_startBtn;
 
-    const quint16 PORT = 6767;
+    const quint16 port = 6767;
 };

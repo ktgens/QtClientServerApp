@@ -1,4 +1,5 @@
 build/
 bin/
+Отчёты/tex
 CMakeUserPresets.json
 .vscode/
